@@ -2,10 +2,10 @@
 import pandas as pd
 print(pd.__version__)
 
-L = [100,102,103]
+L = [100,102, 104, 200, 202]
 
-ser = pd.Series(L,index=["a","b","c"])
+ser = pd.Series(L,index=["a","b","c","d","e"])
 
-ser.loc["c"] = 200
+print(ser[ser>=200])
 
-print(ser.iloc[0])
+
