@@ -1,11 +1,8 @@
-#first Comment
 import pandas as pd
 print(pd.__version__)
 
-L = [100,102, 104, 200, 202]
+calories = {"day1":1750, "day2":2100,"day3":1700}
+#no need index paramenter here since we have key value pairs
+ser = pd.Series(calories)
 
-ser = pd.Series(L,index=["a","b","c","d","e"])
-
-print(ser[ser>=200])
-
-
+print(ser.loc["day2"])
