@@ -6,6 +6,6 @@ L = [100,102,103]
 
 ser = pd.Series(L,index=["a","b","c"])
 
-
+ser.loc["c"] = 200
 
 print(ser.loc["c"])
