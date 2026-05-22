@@ -2,8 +2,10 @@
 import pandas as pd
 print(pd.__version__)
 
-L = [True,False]
+L = [100,102,103]
 
-ser = pd.Series(L,index=["a","b"])
+ser = pd.Series(L,index=["a","b","c"])
 
-print(ser)
+
+
+print(ser.loc["c"])
