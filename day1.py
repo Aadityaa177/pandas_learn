@@ -1,6 +1,11 @@
 import pandas as pd
 
-df = pd.read_csv("pokemon.csv", index_col = "No")
+df = pd.read_csv("pokemon.csv", index_col = "Name")
 
-# selection by rows
-print(df.iloc[0:11,0:3])
+pokemon = input("Enter a Pokemon Name: ")
+
+try:
+    print(df.loc[pokemon])
+except KeyError:
+    print(f"{pokemon} not found")
+
