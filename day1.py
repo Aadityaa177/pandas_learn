@@ -17,13 +17,20 @@ df = pd.read_csv("pokemon.csv", index_col = "Name")
 #print(df.count())
 
 # For single column
-print(df["Height"].mean())
 
-print(df["Height"].sum())
+#print(df["Height"].mean())
 
-print(df["Height"].min())
+#print(df["Height"].sum())
 
-print(df["Height"].max())
+#print(df["Height"].min())
 
-print(df["Height"].count())
+#print(df["Height"].max())
+
+#print(df["Height"].count())
+
+group = df.groupby("Type1")
+
+print(group["Height"].mean())
+
+print(group["Weight"].max())
 
