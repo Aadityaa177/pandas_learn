@@ -5,13 +5,25 @@ import pandas as pd
 #             Often used with the groupby() function
 df = pd.read_csv("pokemon.csv", index_col = "Name")
 
+#Whole data frame
 #print(df.mean(numeric_only=True))
 
-print(df.sum(numeric_only=True))
+#print(df.sum(numeric_only=True))
 
-print(df.min(numeric_only=True))
+#print(df.min(numeric_only=True))
 
-print(df.max(numeric_only=True))
+#print(df.max(numeric_only=True))
 
-print(df.count())
+#print(df.count())
+
+# For single column
+print(df["Height"].mean())
+
+print(df["Height"].sum())
+
+print(df["Height"].min())
+
+print(df["Height"].max())
+
+print(df["Height"].count())
 
